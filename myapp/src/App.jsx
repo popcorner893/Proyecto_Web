@@ -13,9 +13,24 @@ function App() {
     <div>
       {/* Zona Superior */}
       <div className="zona zona-superior">
-        <div className="logo">Logo del Portal Deportivo</div>
-        <img src='/titulo.png' alt="logo" style={{height: 'auto'}} />
-        <div className="perfil">Perfil</div>
+        <div style={{
+          flex: 1,
+          textAlign: 'center',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%'
+        }}>
+          <img
+          src="/titulo.png"
+          alt="logo"
+          style={{
+            height: '100%',
+            objectFit: 'contain'
+          }}
+        />
+      </div>
+      <div className="perfil">Perfil</div>
       </div>
 
       {/* Zona Menú */}

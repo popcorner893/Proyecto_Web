@@ -13,7 +13,7 @@
 
     /* Zona superior */
     .zona-superior {
-      background-color: #1E1E1E;
+      background-color: #181f2d;
       color: white;
       display: flex;
       justify-content: space-between;
@@ -30,22 +30,25 @@
     }
     .zona-superior .perfil {
       width: 100px;
-      background-color: #16A34A;
+      background-color: #05f1cf;
+      color: #181f2d;
+      font-weight: bold;
       border-radius: 12px;
       text-align: center;
       padding: 8px;
       cursor: pointer;
     }
     .zona-superior .perfil:hover {
-      background-color: #0055aa;
+      background-color: #00857f;
+      color: white;
     }
 
     /* Zona menú */
     .zona-menu {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      background-color: #004488;
-      color: white;
+      background-color: white;
+      color: #181f2d;
       text-align: center;
       font-weight: bold;
     }
@@ -55,7 +58,7 @@
       transition: background-color 0.3s;
     }
     .zona-menu div:hover {
-      background-color: #0066cc;
+      background-color: #05f1cf;
     }
 
     /* Zona partidos recientes */
