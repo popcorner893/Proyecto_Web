@@ -1,0 +1,43 @@
+.oraculo-not-logged-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+.oraculo-not-logged-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  border: 4px solid #16c0b7;
+}
+
+.oraculo-not-logged-title {
+  font-size: 1.6rem;
+  color: #16c0b7;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.oraculo-not-logged-button {
+  background-color: #16c0b7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.oraculo-not-logged-button:hover {
+  background-color: #13a99f;
+  transform: translateY(-2px);
+}

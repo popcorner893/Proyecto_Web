@@ -1,0 +1,345 @@
+/* === Variables de fuentes === */
+:root {
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Exo 2', sans-serif;
+
+  /* Colores principales */
+  --verde-principal: #16A34A;
+  --verde-oscuro: #0E7A37;
+  --negro-grafito: #1E1E1E;
+  --blanco-puro: #FFFFFF;
+
+  /* Colores complementarios */
+  --gris-claro: #F2F4F7;
+  --azul-neon: #0D9998;
+
+  /* Paleta extendida */
+  --amarillo: #FFD600;
+  --rojo-alerta: #E63946;
+  --gris-metalico: #A9A9A9;
+}
+
+/* === Reset y tipografías === */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--blanco-puro);
+  color: var(--negro-grafito);
+}
+
+/* === Titulares === */
+h1 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Texto general */
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+small {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #555;
+}
+
+/* Botones y Chatbot */
+button,
+.chat-message,
+.chat-reply,
+.data-stat {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Estilos específicos */
+.chat-reply {
+  font-weight: 600;
+}
+.chat-message {
+  font-weight: 400;
+}
+
+/* === Header Superior === */
+/* === Header Superior ajustado === */
+.zona-superior {
+  display: flex;
+  justify-content: space-between; /* Botón a la derecha */
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--azul-neon);
+  position: relative;
+}
+
+/* Contenedor central para mantener logo centrado */
+.header-logo-center {
+  flex: 1; /* Ocupa todo el espacio central */
+  display: flex;
+  justify-content: center;
+}
+
+/* Fondo negro solo alrededor del logo */
+.header-logo-container {
+  background-color: var(--negro-grafito);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-flex; /* Ajusta al tamaño del logo */
+  align-items: center;
+}
+  
+.logo-img {
+  height: 90px; /* Ajusta tamaño deseado */
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Botón Ingresar */
+/* Botón Iniciar sesión */
+.btn-iniciar-sesion {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--blanco-puro);
+  color: var(--negro-grafito);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid var(--negro-grafito);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-iniciar-sesion:hover {
+  background-color: var(--negro-grafito);
+  color: var(--blanco-puro);
+}
+
+
+
+
+/* === Barra de Navegación secundaria === */
+.zona-menu {
+  display: flex;
+  justify-content: space-around; /* Distribuye los enlaces uniformemente */
+  align-items: center;
+  background-color: var(--blanco-puro); /* Fondo blanco */
+  padding: 12px 0;
+}
+
+.zona-menu a {
+  position: relative;
+  color: var(--negro-grafito);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--font-body);
+  padding: 8px 0;
+  transition: color 0.3s, border-color 0.3s;
+  text-align: center;
+  flex: 1; /* Ocupa espacio uniforme */
+}
+
+/* Border-bottom siempre presente pero muy sutil */
+.zona-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  transition: background-color 0.3s;
+}
+
+/* Hover: cambia color del border-bottom y del texto */
+.zona-menu a:hover {
+  color: var(--verde-principal);
+}
+
+.zona-menu a:hover::after {
+  background-color: var(--verde-principal);
+}
+
+/* Enlace activo: border-bottom verde */
+.zona-menu .activo {
+  color: var(--verde-principal);
+}
+
+.zona-menu .activo::after {
+  background-color: var(--verde-principal);
+}
+
+
+/* === Contenido Principal === */
+.zona-principal {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 120px); /* si hay header y footer */
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .zona-menu {
+    gap: 25px;
+  }
+  .logo-img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  p { font-size: 0.9375rem; }
+  button { font-size: 0.875rem; }
+  .zona-menu {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+
+/*Footer*/
+
+.footer-container {
+  display: flex;
+  background-color: var(--azul-neon);
+  color: var(--blanco-puro);
+  padding: 30px 20px;
+  justify-content: space-between; /* Columnas distribuidas uniformemente */
+  align-items: flex-start; /* Para que el contenido comience desde arriba */
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* Columnas de igual tamaño */
+.footer-column {
+  flex: 1; /* Cada columna ocupa igual espacio */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Contenido pegado al lado izquierdo */
+  position: relative;
+  padding: 0 20px;
+  min-width: 200px; /* Evita que se achique demasiado en móvil */
+}
+
+/* Divisores verticales */
+.footer-column:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: var(--blanco-puro);
+}
+
+/* Logo con fondo negro */
+.footer-logo-container {
+  background-color: var(--negro-grafito);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Títulos y redes sociales */
+.footer-title {
+  font-family: var(--font-title);
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.footer-social-icons a {
+  margin-right: 10px;
+  color: var(--blanco-puro);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-social-icons a:hover {
+  color: var(--verde-principal);
+}
+
+/* Modal: grilla 2x2 */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.team-member .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.team-member .social-icons svg {
+  font-size: 1.2rem;
+  color: var(--negro-grafito);
+  transition: color 0.3s;
+}
+
+.team-member .social-icons svg:hover {
+  color: var(--verde-principal);
+}
+
+
+.btn-cerrar-sesion {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #d9534f; /* rojo al hacer hover */
+}
